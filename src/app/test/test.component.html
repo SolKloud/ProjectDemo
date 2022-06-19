@@ -1,0 +1,25 @@
+<div id="a">
+  <h1>FRIENDS CONTACT LIST</h1>
+  <div id="b">
+    NAME:
+    <br /><input type="text" [(ngModel)]="input" placeholder="ENTER YOUR NAME" /><br /><br />
+    PHONE
+    <br /><input type="text" [(ngModel)]="phone"  placeholder="ENTER YOUR PHONE" />
+    <br /><br /><button id="bt" (click)="onAdd()">Add</button>
+  </div>
+
+  <div id="c">
+      <table>
+        <tr>
+            <th>NAME</th>
+            <th>PHONE</th>
+            <th>UPDATE</th>
+        </tr>
+        <tr *ngFor="let contact of addedList">
+            <td>{{contact.input}}</td>
+            <td>{{contact.phone}}</td>
+            <td><button >UPDATE</button></td>
+        </tr>
+      </table>
+  </div>
+</div>
